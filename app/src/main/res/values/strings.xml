@@ -49,6 +49,7 @@
   <string name="horn_mode" translatable="false">horn_mode</string>
   <string name="reset_top_speed" translatable="false">reset_top_speed</string>
   <string name="reset_user_distance" translatable="false">reset_user_distance</string>
+  <string name="edit_user_distance" translatable="false">edit_user_distance</string>
   <string name="last_mac" translatable="false">last_mac</string>
   <string name="about" translatable="false">about</string>
   <string name="livemap_api_key" translatable="false">livemap_api_key</string>
@@ -105,7 +106,6 @@
   <string name="sign_up" translatable="false">sign_up</string>
   <string name="sign_in_out" translatable="false">sign_in_out</string>
   <string name="enable_pip" translatable="false">enable_pip</string>
-  <string name="edit_user_distance" translatable="false">edit_user_distance</string>
   <string name="use_english" translatable="false">use_english</string>
   <string name="watch_power_saving_mode" translatable="false">watch_enable_power_saving_mode</string>
   <string name="flic_custom_horn_sound" translatable="false">flic_custom_horn_sound</string>
@@ -273,6 +273,7 @@
   <string name="last_mac_title">Edit MAC address</string>
   <string name="about_title">About EUC World</string>
   <string name="reset_user_distance_title">Reset user distance</string>
+  <string name="edit_user_distance_title">Edit user distance</string>
   <string name="reset_top_speed_title">Reset top speed</string>
   <string name="wheel_settings_title">Wheel settings</string>
   <string name="watch_preferences_title">Watch settings</string>
@@ -362,6 +363,7 @@
   <string name="no_settings_title">Wheel settings for Ninebot Z not available yet</string>
   <string name="reset_top_speed_title_2">Reset Top Speed</string>
   <string name="reset_user_distance_title_2">Reset User Distance</string>
+  <string name="edit_user_distance_title_2">Edit User Distance</string>
   <string name="horn_mode_summary">Executed when the select button on the Pebble watch is pressed</string>
   <string name="speech_text_welcome_on_board">Welcome on board!</string>
   <string name="speech_text_speed">Speed: %s.</string>
@@ -392,6 +394,7 @@
   <string name="speech_text_slow_down_1">Slow down!</string>
   <string name="about_eucworld_title">About EUC World</string>
   <string name="about_text"><![CDATA[Version %s built at %s<br>by Sebastian Łastowski <a href="sebastian@euc.world">sebastian@euc.world</a><br><br><small>Hey, are you interested in using the tour tracking feature? Learn more and register for free at <a href="https://euc.world">https://euc.world</a></small>]]></string>
+  <string name ="user_dist_edit_type">Edit User Distance</string>
   <string name="mac_edit_type">MAC Edit</string>
   <string name="ok">OK</string>
   <string name="cancel">Cancel</string>
@@ -470,7 +473,6 @@
   <string name="enable_pip_title">Enable PIP</string>
   <string name="enable_pip_summary">If application is switched to background, it will be displayed in \"picture-in-picture\" mode</string>
   <string name="icon_livemap">Livemap Icon</string>
-  <string name="edit_user_distance_title">Edit user distance</string>
   <string name="use_english_title">Use English</string>
   <string name="use_english_summary">Use English in for app and voice instead of default system language</string>
   <string name="horn_mode_0">Disabled</string>

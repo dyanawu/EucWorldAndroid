@@ -439,6 +439,7 @@ public class PreferencesFragment extends PreferenceFragment implements SharedPre
             case General:
                 tb.setTitle(R.string.general_preferences_title);
                 Preference reset_top_button = findPreference(getString(R.string.reset_top_speed));
+                Preference reset_user_distance_button = findPreference(getString(R.string.reset_user_distance));
                 Preference edit_user_distance_button = findPreference(getString(R.string.edit_user_distance));
                 Preference last_mac_button = findPreference(getString(R.string.last_mac));
                 if (reset_top_button != null) {
@@ -447,11 +448,29 @@ public class PreferencesFragment extends PreferenceFragment implements SharedPre
                         return true;
                     });
                 }
+                if (reset_user_distance_button != null) {
+                    reset_user_distance_button.setOnPreferenceClickListener(preference -> {
+                        WheelData.getInstance().resetUserDistance();
+                        return true;
+                    });
+                }
                 if (edit_user_distance_button != null) {
                     edit_user_distance_button.setOnPreferenceClickListener(preference -> {
-                        WheelData.getInstance().resetUserDistance();
-                        //showEditUserDistanceDialog();
-                        return true;
+                        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                        builder.setTitle(R.string.user_dist_edit_type);
+
+                        final EditText input = new EditText(getActivity());
+                        input.setInputType(InputType.TYPE_CLASS_TEXT);
+                        input.setText(SettingsUtil.getUserDistance(getActivity(), SettingsUtil.getLastAddress(getActivity())));
+                        builder.setView(input);
+                        builder.setPositiveButton(R.string.ok, (dialog, which) -> {
+                            final long originalDistance = Long.parseLong(input.getText().toString());
+                            WheelData.getInstance().editUserDistance(originalDistance);
+                        });
+                        builder.setNegativeButton(R.string.cancel, (dialog, which) -> dialog.cancel());
+                        builder.show();
+
+                            return true;
                     });
                 }
                 if (last_mac_button != null) {

@@ -77,6 +77,11 @@
         android:title="@string/reset_user_distance_title" />
 
     <Preference
+        android:key="@string/edit_user_distance"
+        android:enabled="true"
+        android:title="@string/edit_user_distance_title" />
+
+    <Preference
         android:key="@string/last_mac"
         android:enabled="true"
         android:title="@string/last_mac_title" />

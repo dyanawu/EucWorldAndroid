@@ -663,7 +663,11 @@ public class WheelData {
             mUserDistance = mTotalDistance;
         }
     }
-	
+
+	public void editUserDistance(long originalDistance) {
+        SettingsUtil.setUserDistance(mContext, mBluetoothLeService.getBluetoothDeviceAddress(), originalDistance);
+        mUserDistance = originalDistance;
+    }
 	public void resetTopSpeed() {
 		mTopSpeed = 0;
     }
